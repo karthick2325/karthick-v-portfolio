@@ -1,0 +1,631 @@
+/* ========================= */
+/* GOOGLE FONT */
+/* ========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ========================= */
+/* RESET */
+/* ========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f7f8fc;
+    color:#0b1437;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* ========================= */
+/* COMMON */
+/* ========================= */
+
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+}
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
+.header{
+    width:100%;
+    background:#ffffff;
+    border-bottom:1px solid #e8ebf3;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:95px;
+}
+
+/* ========================= */
+/* LOGO */
+/* ========================= */
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.logo-icon{
+    font-size:36px;
+    font-weight:800;
+    color:#1f5cff;
+}
+
+.logo h2{
+    font-size:32px;
+    font-weight:700;
+}
+
+/* ========================= */
+/* NAVIGATION */
+/* ========================= */
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:50px;
+}
+
+.nav-links a{
+    color:#111827;
+    font-size:18px;
+    font-weight:500;
+    transition:0.3s;
+    position:relative;
+}
+
+.nav-links a:hover{
+    color:#1f5cff;
+}
+
+.nav-links a.active{
+    color:#1f5cff;
+}
+
+.nav-links a.active::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-35px;
+    width:100%;
+    height:3px;
+    background:#1f5cff;
+}
+
+/* ========================= */
+/* DARK MODE ICON */
+/* ========================= */
+
+.theme-toggle{
+    width:55px;
+    height:55px;
+    background:#ffffff;
+    border-radius:18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.theme-toggle i{
+    font-size:20px;
+    color:#111827;
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.hero{
+    min-height:calc(100vh - 95px);
+    display:flex;
+    align-items:center;
+    padding:20px 0;
+}
+
+.hero-container{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    align-items:center;
+    gap:20px;
+}
+
+/* ========================= */
+/* LEFT CONTENT */
+/* ========================= */
+
+.greeting-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:14px 24px;
+    background:#eef3ff;
+    border-radius:30px;
+    font-size:20px;
+    font-weight:500;
+    color:#1f5cff;
+    margin-bottom:35px;
+}
+
+.hero-title{
+    font-size:95px;
+    line-height:1;
+    font-weight:800;
+    color:#08163f;
+    margin-bottom:20px;
+}
+
+.hero-subtitle{
+    font-size:38px;
+    line-height:1.5;
+    font-weight:700;
+    color:#08163f;
+}
+
+.hero-subtitle span{
+    color:#1f5cff;
+}
+
+.gradient-text{
+    background:linear-gradient(
+        90deg,
+        #4f46e5,
+        #7c3aed
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.title-line{
+    width:60px;
+    height:4px;
+    background:#1f5cff;
+    margin:30px 0;
+}
+
+.hero-description{
+    max-width:520px;
+    font-size:18px;
+    line-height:1.8;
+    color:#5b6478;
+}
+
+/* ========================= */
+/* HERO BUTTONS */
+/* ========================= */
+
+.hero-buttons{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    margin-top:45px;
+}
+
+.btn{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:20px 35px;
+    border-radius:14px;
+    font-size:22px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.primary-btn{
+    background:#1f5cff;
+    color:#fff;
+}
+
+.primary-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px rgba(31,92,255,.25);
+}
+
+.secondary-btn{
+    border:2px solid #1f5cff;
+    color:#0b1437;
+    background:#fff;
+}
+
+.secondary-btn:hover{
+    background:#1f5cff;
+    color:#fff;
+}
+
+/* ========================= */
+/* SOCIAL LINKS */
+/* ========================= */
+
+.social-section{
+    margin-top:55px;
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.social-section span{
+    font-size:22px;
+    color:#4b5563;
+}
+
+.social-icons{
+    display:flex;
+    gap:15px;
+}
+
+.social-icons a{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    color:#fff;
+    transition:.3s;
+}
+
+.social-icons a:hover{
+    transform:translateY(-5px);
+}
+
+.social-icons a:nth-child(1){
+    background:#111827;
+}
+
+.social-icons a:nth-child(2){
+    background:#0077b5;
+}
+
+.social-icons a:nth-child(3){
+    background:#1da1f2;
+}
+
+.social-icons a:nth-child(4){
+    background:linear-gradient(
+        45deg,
+        #f9ce34,
+        #ee2a7b,
+        #6228d7
+    );
+}
+
+.social-icons a:nth-child(5){
+    background:#ef4444;
+}
+
+/* ========================= */
+/* HERO IMAGE SECTION */
+/* ========================= */
+
+.hero-image-area{
+    position:relative;
+    height:600px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* BIG CIRCLE */
+
+.circle-bg{
+    position:absolute;
+    width:560px;
+    height:560px;
+    border-radius:50%;
+    background:#eaf0ff;
+    z-index:1;
+}
+
+/* CURVE LINE */
+
+.curve-design{
+    position:absolute;
+    width:420px;
+    height:420px;
+    border-left:4px solid #1f5cff;
+    border-radius:50%;
+    left:20px;
+    top:180px;
+    z-index:2;
+}
+
+/* PROFILE IMAGE */
+
+.profile-image{
+    width:550px;
+    position:relative;
+    top:-40px;
+    z-index:5;
+}
+
+/* STATUS CARD */
+
+.status-card{
+    position:absolute;
+    right:-10px;
+    bottom:120px;
+    background:#fff;
+    border-radius:24px;
+    padding:20px 25px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+    min-width:320px;
+    z-index:10;
+
+    box-shadow:
+    0 10px 35px rgba(0,0,0,.08);
+}
+
+.status-icon{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#1f5cff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.status-icon i{
+    color:#fff;
+    font-size:24px;
+}
+
+.status-content h4{
+    font-size:18px;
+    color:#111827;
+}
+
+.status-content p{
+    font-size:22px;
+    font-weight:600;
+    color:#111827;
+}
+
+.status-dot{
+    width:14px;
+    height:14px;
+    background:#22c55e;
+    border-radius:50%;
+    margin-left:auto;
+}
+
+/* ========================= */
+/* SKILLS STRIP */
+/* ========================= */
+
+.skills-strip{
+    padding:0 0 30px;
+    margin-top:-20px;
+}
+
+.skills-wrapper{
+    background:#fff;
+    border-radius:18px;
+    padding:35px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.05);
+}
+
+.skill-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:22px;
+    font-weight:600;
+    color:#111827;
+}
+
+.skill-item i{
+    font-size:34px;
+}
+
+/* COLORS */
+
+.skill-item:nth-child(1) i{
+    color:#e44d26;
+}
+
+.skill-item:nth-child(2) i{
+    color:#264de4;
+}
+
+.skill-item:nth-child(3) i{
+    color:#f7df1e;
+}
+
+.skill-item:nth-child(4) i{
+    color:#61dafb;
+}
+
+.skill-item:nth-child(5) i{
+    color:#68a063;
+}
+
+.skill-item:nth-child(6) i{
+    color:#3776ab;
+}
+
+.skill-item:nth-child(7) i{
+    color:#2563eb;
+}
+
+.skill-item:nth-child(8) i{
+    color:#f1502f;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:1200px){
+
+    .hero-title{
+        font-size:80px;
+    }
+
+    .hero-subtitle{
+        font-size:30px;
+    }
+
+    .hero-description{
+        font-size:20px;
+    }
+
+    .profile-image{
+        width:500px;
+    }
+
+}
+
+@media(max-width:992px){
+
+    .hero-container{
+        grid-template-columns:1fr;
+    }
+
+    .hero-content{
+        text-align:center;
+    }
+
+    .title-line{
+        margin:30px auto;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .social-section{
+        justify-content:center;
+    }
+
+    .hero-image-area{
+        height:auto;
+        margin-top:50px;
+    }
+
+    .hero-content{
+    margin-top:-20px;
+}
+
+    .circle-bg{
+        width:560px;
+        height:560px;
+    }
+
+    .profile-image{
+        width:450px;
+    }
+
+    .status-card{
+        position:relative;
+        margin-top:20px;
+        right:auto;
+        bottom:auto;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero-title{
+        font-size:55px;
+    }
+
+    .hero-subtitle{
+        font-size:24px;
+    }
+
+    .hero-description{
+        font-size:18px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .circle-bg{
+        width:350px;
+        height:350px;
+    }
+
+    .profile-image{
+        width:320px;
+    }
+
+    .skills-wrapper{
+        gap:25px;
+        justify-content:center;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .logo h2{
+        font-size:22px;
+    }
+
+    .hero-title{
+        font-size:45px;
+    }
+
+    .greeting-badge{
+        font-size:16px;
+    }
+
+    .btn{
+        width:100%;
+        justify-content:center;
+    }
+
+}
