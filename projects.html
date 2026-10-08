@@ -1,421 +1,406 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="Karthick V portfolio projects including Smart Zoo Management System, Excel dashboards, SQL database projects and Power BI manufacturing analytics dashboards.">
     <title>Projects | Karthick V</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/projects.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
+    <link rel="stylesheet" href="css/projects.css">
 </head>
 
 <body>
 
-    <!-- ========================= -->
-    <!-- HEADER -->
-    <!-- ========================= -->
+<header class="header">
+    <div class="container header-inner">
+        <a class="logo" href="index.html" aria-label="Karthick V Home">
+            <span class="logo-icon">KV</span>
+            <h2>Karthick V</h2>
+        </a>
 
-    <header class="header">
+        <nav class="navbar" aria-label="Main navigation">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="certificates.html">Certificates</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
 
-        <div class="container">
+        <button class="theme-toggle" type="button" aria-label="Toggle theme">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+    </div>
+</header>
 
-            <div class="logo">
-
-                <span class="logo-icon">KV</span>
-
-                <h2>Karthick V</h2>
-
-            </div>
-
-            <nav class="navbar">
-
-                <ul class="nav-links">
-
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-
-                    <li>
-                        <a href="skills.html">Skills</a>
-                    </li>
-
-                    <li>
-                        <a href="projects.html" class="active">
-                            Projects
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="certificates.html">
-                            Certificates
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="contact.html">
-                            Contact
-                        </a>
-                    </li>
-
-                </ul>
-
-            </nav>
-
-            <div class="theme-toggle">
-
-                <i class="fa-solid fa-moon"></i>
-
-            </div>
-
-        </div>
-
-    </header>
-
-    <!-- ========================= -->
-    <!-- PROJECTS SECTION -->
-    <!-- ========================= -->
-
+<main>
     <section class="projects-section">
-
         <div class="container">
-
-            <!-- ========================= -->
-            <!-- TOP SECTION -->
-            <!-- ========================= -->
 
             <div class="projects-top">
-
-                <!-- LEFT CONTENT -->
-
                 <div class="projects-content">
-
-                    <div class="section-badge">
-
-                        ● MY WORK
-
-                    </div>
+                    <div class="section-badge">● MY WORK</div>
 
                     <h1 class="projects-title">
-
-                        My
-                        <span>Projects</span>
-
+                        My <span>Projects</span>
                     </h1>
 
                     <div class="title-line"></div>
 
                     <p class="projects-description">
-
-                        Here are some of the projects
-                        I have worked on.
-
+                        A collection of practical projects covering web development,
+                        Excel analytics, SQL database design and Power BI business intelligence.
                         <br>
-
-                        These projects showcase my skills in frontend development, PHP, MySQL and problem solving through real-world applications.
-
+                        These projects demonstrate data analysis, visualization, database design
+                        and real-world problem solving.
                     </p>
-
                 </div>
 
-                <!-- RIGHT ILLUSTRATION -->
-
-                <div class="projects-illustration">
-
+                <div class="projects-illustration" aria-hidden="true">
                     <div class="illustration-main">
-
-                        <i class="fa-solid fa-code"></i>
-
+                        <i class="fa-solid fa-chart-line"></i>
                     </div>
-
                     <div class="floating-card image-card">
-
                         <i class="fa-solid fa-image"></i>
-
                     </div>
-
                     <div class="floating-card window-card">
-
-                        <i class="fa-solid fa-window-maximize"></i>
-
+                        <i class="fa-solid fa-table-columns"></i>
                     </div>
-
                     <div class="floating-card menu-card">
-
-                        <i class="fa-solid fa-bars"></i>
-
+                        <i class="fa-solid fa-database"></i>
                     </div>
-
                     <div class="dots-pattern"></div>
-
                 </div>
-
             </div>
 
-            <!-- ========================= -->
-            <!-- FILTER BUTTONS -->
-            <!-- ========================= -->
-
-            <div class="project-filters">
-
-                <button class="filter-btn active">
-
+            <div class="project-filters" role="group" aria-label="Project filters">
+                <button class="filter-btn active" type="button" data-filter="all">
                     <i class="fa-solid fa-border-all"></i>
-
                     All Projects
-
                 </button>
 
-                <button class="filter-btn">
-
+                <button class="filter-btn" type="button" data-filter="web">
                     <i class="fa-solid fa-globe"></i>
-
                     Web Development
-
                 </button>
 
-                <button class="filter-btn">
-
-                    <i class="fa-solid fa-wand-magic-sparkles"></i>
-
-                    PHP Projects
-
+                <button class="filter-btn" type="button" data-filter="excel">
+                    <i class="fa-solid fa-table"></i>
+                    Excel
                 </button>
 
-
-                <button class="filter-btn">
-
-                    <i class="fa-solid fa-ellipsis"></i>
-
-                    Frontend Projects
-
+                <button class="filter-btn" type="button" data-filter="sql">
+                    <i class="fa-solid fa-database"></i>
+                    SQL
                 </button>
 
+                <button class="filter-btn" type="button" data-filter="powerbi">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Power BI
+                </button>
             </div>
-
-            <!-- ========================= -->
-            <!-- PROJECT GRID -->
-            <!-- ========================= -->
 
             <div class="projects-grid">
 
-                <!-- PROJECT 1 -->
-
-                <div class="project-card">
-
+                <!-- 1. SMART ZOO -->
+                <article class="project-card" data-category="web">
                     <div class="project-image">
-
                         <img src="assets/images/smart-zoo.png"
-                            alt="Smart Zoo Management System">
-
+                             alt="Smart Zoo Management System"
+                             loading="lazy">
+                        <span class="image-label">WEB</span>
                     </div>
 
                     <div class="project-content">
-
-                        <h3 class="project-title">
-
-                            Smart Zoo Management System
-
-                        </h3>
+                        <h3 class="project-title">Smart Zoo Management System</h3>
 
                         <span class="project-category web-badge">
-
-                            Web Development
-
+                            <i class="fa-solid fa-globe"></i> Web Development
                         </span>
 
                         <p class="project-description">
-
-                            A role-based zoo management system with modules for administrators, veterinarians, zoo keepers and visitors.
-
+                            A role-based zoo management system covering administrators,
+                            zoo keepers, visitors, animal management, ticket booking,
+                            food stock, health tracking and emergency operations.
                         </p>
 
                         <div class="project-tech">
-
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JavaScript</span>
                             <span>PHP</span>
                             <span>MySQL</span>
-
                         </div>
 
                         <div class="project-links">
-
-                            <a href="assets/SMART-ZOO-DEMO-VIDEO.mp4" class="live-link">
-
+                            <a href="assets/SMART-ZOO-DEMO-VIDEO.mp4"
+                               class="project-btn primary"
+                               target="_blank"
+                               rel="noopener"
+                               data-local-file="true">
                                 Live Demo
-
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
                             </a>
-
-                            <a href="https://github.com/karthick2325/smart-zoo-management-system.git" class="code-link">
-
+                            <a href="https://github.com/karthick2325/smart-zoo-management-system.git"
+                               class="project-btn secondary"
+                               target="_blank"
+                               rel="noopener">
                                 View Code
-
                                 <i class="fa-brands fa-github"></i>
-
                             </a>
-
                         </div>
-
                     </div>
+                </article>
 
-                </div>
-
-                
-
-                <!-- PROJECT 3 -->
-
-                
-
-                <!-- PROJECT 4 -->
-
-                
-                <!-- PROJECT 5 -->
-
-                <div class="project-card">
-
+                <!-- 2. FRESHMART -->
+                <article class="project-card" data-category="excel">
                     <div class="project-image">
-
-                        <img src="assets/images/sms.png"
-                            alt="Student Management System">
-
+                        <img src="assets/images/freshmart.png"
+                             alt="FreshMart Profitability Leakage Analysis Excel Dashboard"
+                             loading="lazy">
+                        <span class="image-label">EXCEL</span>
                     </div>
 
                     <div class="project-content">
+                        <h3 class="project-title">FreshMart Profitability Leakage Analysis</h3>
 
-                        <h3 class="project-title">
-
-                            Student Management System
-
-                        </h3>
-
-                        <span class="project-category web-badge">
-
-                            Web Development
-
+                        <span class="project-category excel-badge">
+                            <i class="fa-solid fa-table"></i> Excel
                         </span>
 
                         <p class="project-description">
-
-                            A student management system with CRUD operations, attendance tracking and academic record management.
-
+                            An Excel retail profitability dashboard analyzing sales, profit,
+                            cost, margin, orders, returns, discounts, regions and category
+                            performance to identify profitability leakage.
                         </p>
 
                         <div class="project-tech">
-
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>PHP</span>
-                            <span>MySQL</span>
-
+                            <span>Excel</span>
+                            <span>Pivot Tables</span>
+                            <span>Pivot Charts</span>
+                            <span>Slicers</span>
+                            <span>Data Analysis</span>
                         </div>
 
                         <div class="project-links">
-
-                            <a href="assets/STUDENT-MANAGEMENT-SYSTEM-DEMO-VIDEOS.mp4" class="live-link">
-
-                                Live Demo
-
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                            </a>
-
-                            <a href="https://github.com/karthick2325/student-management-system.git" class="code-link">
-
-                                View Code
-
-                                <i class="fa-brands fa-github"></i>
-
-                            </a>
-
+                            <span class="project-btn disabled">
+                                View Project
+                                <i class="fa-solid fa-chart-pie"></i>
+                            </span>
                         </div>
-
                     </div>
+                </article>
 
-                </div>
-
-                <div class="project-card">
-
+                <!-- 3. TRENDMART -->
+                <article class="project-card" data-category="excel">
                     <div class="project-image">
-
-                        <img src="assets/images/port-folio.png"
-                            alt="Portfolio Website">
-
+                        <img src="assets/images/trendmart.png"
+                             alt="TrendMart Profitability Leakage Analysis Excel Dashboard"
+                             loading="lazy">
+                        <span class="image-label">EXCEL</span>
                     </div>
 
                     <div class="project-content">
+                        <h3 class="project-title">TrendMart Profitability Leakage Analysis</h3>
 
-                        <h3 class="project-title">
-
-                            Portfolio Website
-
-                        </h3>
-
-                        <span class="project-category web-badge">
-
-                            Web Development
-
+                        <span class="project-category excel-badge">
+                            <i class="fa-solid fa-table"></i> Excel
                         </span>
 
                         <p class="project-description">
-
-                            A personal portfolio website
-                            to showcase skills,
-                            projects and professional
-                            journey.
-
+                            A retail analytics dashboard focused on sales, profitability,
+                            discounts, returns, stores, products, categories, brands,
+                            membership and sales channels.
                         </p>
-                                                <div class="project-tech">
 
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-
+                        <div class="project-tech">
+                            <span>Excel</span>
+                            <span>Pivot Tables</span>
+                            <span>Pivot Charts</span>
+                            <span>Slicers</span>
+                            <span>Data Analysis</span>
                         </div>
 
                         <div class="project-links">
-
-                            <a href="assets/PORT-FOLIO-DEMO-VIDEO.mp4" class="live-link">
-
-                                Live Demo
-
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                            </a>
-
-                            <a href="https://github.com/karthick2325/karthick-v-portfolio.git" class="code-link">
-
-                                View Code
-
-                                <i class="fa-brands fa-github"></i>
-
-                            </a>
-
+                            <span class="project-btn disabled">
+                                View Project
+                                <i class="fa-solid fa-chart-pie"></i>
+                            </span>
                         </div>
+                    </div>
+                </article>
 
+                <!-- 4. AEROHOME -->
+                <article class="project-card" data-category="powerbi">
+                    <div class="project-image">
+                        <img src="assets/images/aerohome.png"
+                             alt="AeroHome Manufacturing Power BI Dashboard"
+                             loading="lazy">
+                        <span class="image-label">POWER BI</span>
                     </div>
 
-                </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AeroHome Manufacturing – Production Performance</h3>
+
+                        <span class="project-category powerbi-badge">
+                            <i class="fa-solid fa-chart-column"></i> Power BI
+                        </span>
+
+                        <p class="project-description">
+                            A manufacturing dashboard analyzing planned versus actual production,
+                            achievement, shortfall, plants, products, machines and production trends.
+                        </p>
+
+                        <div class="project-tech">
+                            <span>Power BI</span>
+                            <span>Power Query</span>
+                            <span>DAX</span>
+                            <span>Data Modeling</span>
+                            <span>Visualization</span>
+                        </div>
+
+                        <div class="project-links">
+                            <span class="project-btn disabled">
+                                View Project
+                                <i class="fa-solid fa-chart-column"></i>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 5. NOVITECH -->
+                <article class="project-card" data-category="powerbi">
+                    <div class="project-image">
+                        <img src="assets/images/novitech.png"
+                             alt="Novitech Manufacturing Power BI Dashboard"
+                             loading="lazy">
+                        <span class="image-label">POWER BI</span>
+                    </div>
+
+                    <div class="project-content">
+                        <h3 class="project-title">Novitech Manufacturing – Production &amp; Plant Performance</h3>
+
+                        <span class="project-category powerbi-badge">
+                            <i class="fa-solid fa-chart-column"></i> Power BI
+                        </span>
+
+                        <p class="project-description">
+                            A manufacturing analytics dashboard monitoring production across
+                            plants, product categories and products, with downtime and defect-rate analysis.
+                        </p>
+
+                        <div class="project-tech">
+                            <span>Power BI</span>
+                            <span>Power Query</span>
+                            <span>DAX</span>
+                            <span>Data Modeling</span>
+                            <span>Visualization</span>
+                        </div>
+
+                        <div class="project-links">
+                            <span class="project-btn disabled">
+                                View Project
+                                <i class="fa-solid fa-chart-column"></i>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 6. HEALTHPLUS -->
+                <article class="project-card" data-category="sql">
+                    <div class="project-image">
+                        <img src="assets/images/healthplus-schema.png"
+                             alt="HealthPlus Care SQL Database Schema"
+                             loading="lazy">
+                        <span class="image-label">SQL</span>
+                    </div>
+
+                    <div class="project-content">
+                        <h3 class="project-title">HealthPlus Care Database</h3>
+
+                        <span class="project-category sql-badge">
+                            <i class="fa-solid fa-database"></i> SQL
+                        </span>
+
+                        <p class="project-description">
+                            A relational healthcare database covering clinics, members, specialists,
+                            consultations, prescriptions, billing, payments, lab tests, subscriptions,
+                            corporate members, telemedicine and feedback.
+                        </p>
+
+                        <div class="project-tech">
+                            <span>SQL</span>
+                            <span>MySQL</span>
+                            <span>ER Diagram</span>
+                            <span>Database Design</span>
+                            <span>Joins</span>
+                        </div>
+
+                        <div class="project-links">
+                            <span class="project-btn disabled">
+                                View Project
+                                <i class="fa-solid fa-database"></i>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 7. SQL PROJECT 2 -->
+                <article class="project-card" data-category="sql">
+                    <div class="project-image">
+                        <img src="assets/images/sql-project-2.png"
+                             alt="SQL Database Project 2 Schema"
+                             loading="lazy">
+                        <span class="image-label">SQL</span>
+                    </div>
+
+                    <div class="project-content">
+                        <h3 class="project-title">SQL Database Project 2</h3>
+
+                        <span class="project-category sql-badge">
+                            <i class="fa-solid fa-database"></i> SQL
+                        </span>
+
+                        <p class="project-description">
+                            A relational SQL database project presented through its schema and
+                            table relationships. Detailed project information will be finalized
+                            from the supplied second SQL schema.
+                        </p>
+
+                        <div class="project-tech">
+                            <span>SQL</span>
+                            <span>MySQL</span>
+                            <span>Database Design</span>
+                            <span>ER Diagram</span>
+                        </div>
+
+                        <div class="project-links">
+                            <span class="project-btn disabled">
+                                View Project
+                                <i class="fa-solid fa-database"></i>
+                            </span>
+                        </div>
+                    </div>
+                </article>
 
             </div>
-            
+
+            <p class="projects-count" aria-live="polite">
+                Showing <strong id="visibleProjectCount">7</strong> of 7 projects
+            </p>
+        </div>
     </section>
+</main>
 
+<script src="js/projects.js"></script>
 </body>
-
 </html>
