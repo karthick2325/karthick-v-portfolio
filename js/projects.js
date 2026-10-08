@@ -1,102 +1,194 @@
+/* =========================================================
+   PROJECTS PAGE JAVASCRIPT
+   Karthick V Portfolio
+   ========================================================= */
+
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* =========================================
-       PROJECT FILTER
-    ========================================= */
 
-    const filterButtons = document.querySelectorAll(".filter-btn");
-    const projectCards = document.querySelectorAll(".project-card");
+    /* =====================================================
+       PROJECT FILTER
+    ===================================================== */
+
+    const filterButtons =
+        document.querySelectorAll(".filter-btn");
+
+    const projectCards =
+        document.querySelectorAll(".project-card");
+
     const visibleProjectCount =
         document.getElementById("visibleProjectCount");
 
-    function updateCount() {
 
-        const visible = [...projectCards].filter(
-            card => !card.classList.contains("hidden")
-        ).length;
+    /* =====================================================
+       UPDATE PROJECT COUNT
+    ===================================================== */
+
+    function updateProjectCount() {
+
+        const visibleCards =
+            [...projectCards].filter(
+                card =>
+                    !card.classList.contains("hidden")
+            );
 
         if (visibleProjectCount) {
-            visibleProjectCount.textContent = visible;
+
+            visibleProjectCount.textContent =
+                visibleCards.length;
+
         }
+
     }
+
+
+    /* =====================================================
+       FILTER PROJECTS
+    ===================================================== */
 
     filterButtons.forEach(button => {
 
         button.addEventListener("click", () => {
 
-            /* Remove active state */
+
+            /* Remove active state from all buttons */
+
             filterButtons.forEach(btn => {
+
                 btn.classList.remove("active");
+
             });
 
-            /* Add active state */
+
+            /* Add active state to clicked button */
+
             button.classList.add("active");
 
-            const filter = button.dataset.filter;
 
-            /* Show / hide projects */
+            /* Get selected category */
+
+            const selectedFilter =
+                button.dataset.filter;
+
+
+            /* Show / hide project cards */
+
             projectCards.forEach(card => {
 
-                const category = card.dataset.category;
+                const category =
+                    card.dataset.category;
+
 
                 const shouldShow =
-                    filter === "all" ||
-                    category === filter;
+                    selectedFilter === "all" ||
+                    category === selectedFilter;
+
 
                 card.classList.toggle(
                     "hidden",
                     !shouldShow
                 );
+
             });
 
-            updateCount();
+
+            /* Update visible project count */
+
+            updateProjectCount();
+
         });
+
     });
 
-    /* Initial count */
-    updateCount();
+
+    /* =====================================================
+       INITIAL PROJECT COUNT
+    ===================================================== */
+
+    updateProjectCount();
 
 
-    /* =========================================
+
+    /* =====================================================
        THEME TOGGLE
-    ========================================= */
+       ===================================================== */
 
     const themeToggle =
         document.querySelector(".theme-toggle");
 
+
     if (themeToggle) {
 
-        themeToggle.addEventListener("click", () => {
+        themeToggle.addEventListener(
+            "click",
+            () => {
 
-            document.body.classList.toggle("dark-mode");
 
-            const icon =
-                themeToggle.querySelector("i");
+                /* Toggle dark mode class */
 
-            if (icon) {
+                document.body.classList.toggle(
+                    "dark-mode"
+                );
 
-                icon.classList.toggle("fa-moon");
-                icon.classList.toggle("fa-sun");
+
+                /* Get icon */
+
+                const icon =
+                    themeToggle.querySelector("i");
+
+
+                if (icon) {
+
+                    const darkModeEnabled =
+                        document.body.classList.contains(
+                            "dark-mode"
+                        );
+
+
+                    /* Change moon / sun icon */
+
+                    icon.classList.toggle(
+                        "fa-moon",
+                        !darkModeEnabled
+                    );
+
+                    icon.classList.toggle(
+                        "fa-sun",
+                        darkModeEnabled
+                    );
+
+                }
 
             }
+        );
 
-        });
     }
 
 
-    /* =========================================
+
+    /* =====================================================
        PROJECT LINKS
-    ========================================= */
+       ===================================================== */
 
     /*
-       All project buttons are real <a> links.
-       No automatic disabling is performed here.
+        Project buttons are normal <a> links.
 
-       This is important because local assets such as:
-       assets/images/freshmart.png
-       assets/images/trendmart.png
-       etc.
-       may be opened directly from a local file.
+        No fetch()
+        No HEAD request
+        No automatic disabling
+
+        This allows local assets such as:
+
+        assets/SMART-ZOO-DEMO-VIDEO.mp4
+        assets/images/freshmart.png
+        assets/images/trendmart.png
+        assets/images/aerohome.png
+        assets/images/novitech.png
+        assets/images/healthplus-schema.png
+        assets/images/sql-project-2.png
+
+        to open normally.
     */
+
 
 });
